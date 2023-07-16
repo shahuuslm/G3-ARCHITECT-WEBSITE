@@ -1,0 +1,240 @@
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+  /* Shared styles */
+  * {
+      font-family: 'Work Sans', sans-serif;
+      box-sizing: border-box;
+  }
+
+  .btn-primary {
+      color: #FFF;
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 600;
+      border-radius: 8px;
+      background: #FF900E;
+      border: none;
+      padding: 16px 20px;
+      cursor: pointer;
+  }
+
+  .title {
+      color: #131313;
+      font-size: 3rem;
+      font-weight: 700;
+  }
+
+  .description {
+      color: #727272;
+      line-height: 26px;
+  }
+
+  /* header section styles */
+  header {
+      background-color: rgb(255, 144, 14, .10);
+      /* background-color: rgb(219, 255, 14); */
+      padding: 50px 240px;
+  }
+
+  nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .nav-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #131313;
+  }
+
+  nav>ul {
+      display: flex;
+  }
+
+  nav li {
+      list-style: none;
+      margin-right: 30px;
+      font-size: 1rem;
+      font-weight: 500;
+
+  }
+
+  nav li a {
+      text-decoration: none;
+      color: #424242;
+  }
+
+  /* banner styles */
+  .banner-content {
+      text-align: center;
+      margin: 0 auto;
+  }
+
+  .banner-title {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #131313;
+  }
+
+
+  .banner img {
+      width: 100%;
+      margin-top: 20px;
+  }
+
+  body {
+      max-width: 1440px;
+      margin: 0px auto;
+  }
+
+  /* team section */
+  .team {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 300px;
+      gap: 70px;
+  }
+
+  .team-content {
+      padding: 0px 70px;
+  }
+
+  .team-img {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+  }
+
+  .team-img img {
+      width: 250px;
+  }
+
+  /* feature-section */
+  .feature-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+  }
+
+  .feature-title {
+      border-left: 5px solid #FF900E;
+      padding-left: 20px;
+  }
+
+  .card {
+      padding: 30px;
+      border-radius: 8px;
+      background: #FFF;
+      box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+      margin-bottom: 30px;
+
+  }
+
+  .feature-img img {
+      margin-left: 90px;
+      height: 90%;
+  }
+
+  .badge {
+      border-radius: 8px;
+      background: #FF900E;
+      color: #fff;
+      text-align: center;
+      width: max-content;
+      padding: 10px 40px;
+      position: relative;
+      bottom: 120px;
+
+  }
+
+  .badge-title {
+      font-size: 3rem;
+      font-weight: 700;
+  }
+
+  .badge-description {
+      font-size: 1.5rem;
+      font-weight: 500;
+  }
+
+  /* Fact section */
+
+  .fact {
+      display: flex;
+      text-align: center;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 100px;
+      margin-bottom: 120px;
+  }
+
+  .sponsors {
+      text-align: center;
+  }
+
+  .logos {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 40px;
+
+  }
+
+  .logos img {
+      margin-top: 50px;
+      width: 165px;
+  }
+
+  .foot {
+      width: 60%;
+      margin: 100px auto 200px;
+      border-radius: 8px;
+      background: #FFF4E7;
+      color: #727272;
+      text-align: center;
+      padding: 40px 20px;
+  }
+
+  /* Responsive styles */
+  @media screen and (max-width: 576px) {
+      header, .team {
+          padding: 20px;
+      }
+
+      nav,.team, .feature-section,.logos, .fact {
+          flex-direction: column;
+      }
+      .team-img{
+        grid-template-columns: 1fr;
+      }
+      .team{
+        flex-direction: column-reverse;
+      }
+      .feature-img img{
+        width: 100%;
+        margin-left: 0px;
+      }
+      .badge{
+        position: static;
+        margin: 20px auto 0px;
+      }
+      .facts{
+        text-align: center;
+      }
+  }
+
+  @media screen and (min-width: 576px) and (max-width: 960px) {
+      header {
+          padding: 50px;
+      }
+
+      nav, .team,.feature-section,.logos {
+          flex-direction: column;
+      }
+      .team{
+        flex-direction: column-reverse;
+      }
+  }
